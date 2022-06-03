@@ -1,6 +1,6 @@
 {
     "name": "artillery-engine-socketcluster",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Load test SocketCluster with Artillery.io",
     "main": "index.js",
     "scripts": {},
