@@ -146,6 +146,7 @@ module.exports = class SocketCusterEngine {
             key,
             this.constructor.scMethodsWithoutCapture[key],
             template(requestSpec[key], context),
+            context,
             callback
           );
         };
@@ -295,10 +296,10 @@ module.exports = class SocketCusterEngine {
    * need to capture or match variables in the returned value
    *
    * @param {string} method The sc method's name
+   * @param {object} args Arguments to pass to the sc method
    * @param {object} params The tasks parameters
    * @param {object} context The tasks context
    * @param {function} callback The tasks callback
-   * @param  {...any} args Arguments to pass to the sc method
    * @returns
    */
   invokeSCMethodWithoutCapture(method, args, params, context, callback) {
